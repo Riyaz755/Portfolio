@@ -1,0 +1,141 @@
+{% extends 'Base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block head %}  <style>
+
+  
+
+  
+  body{background-color:black}
+
+
+  
+      #ab {padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        background: #3B5998;
+        color: white;
+        border-radius: 8px;
+       font-size: 30px;	
+    
+    }
+    nav{background-color:#dad7e1}
+    
+    
+
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock head %}
+
+{% block body %}
+
+      
+<div class=" py-5 px-5" style='background-color:#dad7e1;'>
+  <div class="container ">
+      <div class="row align-items-center">
+        
+          <div class="col-sm-6 ">
+            <h1 class="text-primary fw-bold display-3">Hey, I'm Riyaz</h1>
+              <p>A Computer Science Engineer creating mobile apps and static websites.</p>
+              
+               <div class='text-center'>
+                <a class='btn btn-primary' style='margin-left:80px'  href='/#contact'>Contact Me</a>
+                <a class='btn btn-outline-primary my-1 mx-3' target='_blank' rel='noreferrer' href='/static/RiyazCse.pdf'>Resume</a>
+
+               </div>
+               
+
+          </div>
+          <div class="col-sm-3"><div class='text-center'><img  src="/static/Ri.jpg" class="img-thumbnail"  width="200px"  alt='g' /></div></div>
+
+          
+        </div>
+        
+  </div>
+
+</div>  
+
+
+      <div class="About-us " id='About'>
+        <center>
+        <h1 style='text-align:center;color:white'> About </h1>
+        <p style='color:white'>Passionate software engineer with a strong problem-solving and analytical skills.</p>
+      
+      <p style='color:white'>Experienced in a variety of programming language and technologies , including Java, Python,C++, React, Flask and Django.</p>
+        <p style='color:white'>Proven ability to work independentyly &amp; part of team to solve complex problems including Business Development Problems to contribute the success of project and Organization.</p>
+      </div>
+
+
+        
+        <h3 style='text-align:center;color:white' id='skills'> My Skills </h3>
+        <div class="table-responsive">
+          <table class="container" >
+               <tr>
+                <td ><img src='/static/python.jpg' /></td>
+                <td><img src='/static/java.png' /></td>
+                <td><img src='/static/c++.png' /></td>
+                <td><img src='/static/html.jpg' /></td>
+                <td><img src='/static/JS.png' /></td>
+
+               </tr>
+              <tr>
+                <td></td>
+                <td><img src='/static/flask.png' /></td>
+                <td><img src='/static/django.png' /></td>
+                <td><img src='/static/React.png' /></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td> 
+                <td><img src='/static/mysql.png' /></td>
+              </tr>
+          </table></div>
+
+          
+
+
+          <div class="container-fluid px-0" id='contact'>
+            <img src="https://source.unsplash.com/2000x400/?call,contact" class="d-block w-100 " alt='y'>
+        </div>
+        
+        <div class="container mb-3 pt-4" >
+            <h1 class="text-center white" style='color:white'>Contact Us</h1>
+            <form method="POST" action="/index">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label" style='color:white'>Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+                </div>
+        
+                <div class="mb-3">
+                    <label for="email" class="form-label" style='color:white'>Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+                </div>
+        
+                <div class="mb-3">
+                    <label for="phone" class="form-label" style='color:white'>Phone</label>
+                    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+                </div>
+        
+                <div class="mb-3">
+                    <label for="desc" class="form-label" style='color:white'>Tell me about Yourself</label>
+                    <textarea class="form-control" id="desc" name="desc" row="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" >Submit</button>
+        
+            </form>
+        </div>  
+        
+        <center style='margin-left: auto;margin-right: auto;'>
+        <h3 style='color:white'> Find Me On </h3>
+               <a href="https://github.com/Riyaz755" class="fa fa-github" id='ab'></a> 
+               <a href="#" class="fa fa-twitter" id='ab'></a> 
+               <a href="https://www.linkedin.com/in/mohammed-riyaz-mohiuddin-62556a229" class="fa fa-linkedin" id='ab'></a> 
+                </center>
+     
+{% endblock body %}
