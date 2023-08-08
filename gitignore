@@ -62,6 +62,7 @@ parts/
 sdist/ 
 var/ 
 wheels/ 
+_sqlite3/
 *.egg-info/ 
 .installed.cfg 
 *.egg 
