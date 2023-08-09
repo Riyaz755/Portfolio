@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f#aegns+yq%d5^egvb3b2yda6tz6$ma!)mwqd-v(dzxjr4si9-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS =  ['*']
 
@@ -77,17 +77,17 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': railway',
-        'USER':'postgres',
-        'PASSWORD':'ptM3b2Bpq0HkkCfait95',
-        'HOST':'containers-us-west-208.railway.app',
-        'PORT':'5901'
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "railway",
+        "USER": "postgres",
+        "PASSWORD": "ptM3b2Bpq0HkkCfait95",
+        "HOST": "containers-us-west-208.railway.app",
+        "PORT": "5901",
     }
 }
 
-DATABASES['default']= dj_database_url.config()
+# DATABASES['default']= dj_database_url.config()
 
 
 # Password validation
